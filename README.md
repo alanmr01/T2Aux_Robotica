@@ -26,8 +26,8 @@ def frame_processing(frame):
         lower_green = np.array([24, 120, 120]) # Limite inferior color verde HSV
         upper_green = np.array([75, 255, 255]) # Limite superior color verde HSV
 
-        mask_red = cv2.inRange(hsv, lower_red, upper_red)    # Generar mascara color rojo
-        mask_green=cv2.inRange(hsv,lower_green, upper_green) # Generar mascara color verde
+        mask_red = cv2.inRange(hsv, lower_red, upper_red)      # Generar mascara color rojo
+        mask_green = cv2.inRange(hsv,lower_green, upper_green) # Generar mascara color verde
 
         kernel = np.ones((5,5),np.uint8)      # Kernel a utilizar
         dilated_imageRed = cv2.dilate(mask_red, kernel, iterations = 2)     # Dilatar imagen con respecto al color rojo
