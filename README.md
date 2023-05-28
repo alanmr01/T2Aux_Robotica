@@ -1,5 +1,5 @@
 # T2Aux_Robotica
-Codigo
+Código
 
 ```Python
 import cv2
