@@ -38,13 +38,13 @@ def frame_processing(frame):
         
         for cnt in contours_Red:         # Crear bounding boxes rojas para las manzanas rojas
             area = cv2.contourArea(cnt)
-            if area > 1200:  # Ignore small contours
+            if area > 600:  # Ignore small contours
                 x, y, w, h = cv2.boundingRect(cnt)
                 cv2.rectangle(frame, (x, y), (x+w, y+h), color_rojo, 2)
                 
         for cnt in contours_Green:       # Crear bounding boxes verdes para las manzanas verdes
             area = cv2.contourArea(cnt)
-            if area > 1200:  # Ignore small contours
+            if area > 600:  # Ignore small contours
                 x, y, w, h = cv2.boundingRect(cnt)
                 cv2.rectangle(frame, (x, y), (x+w, y+h), color_verde, 2)
                 
